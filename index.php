@@ -22,7 +22,7 @@ $tipoletra=$row_config['tipof_google'];
 <!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"> 
+		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">	
 		<title><?php if($totalRows_prodetalle>0) { echo $row_prodetalle['nombre_prod']." - ";} ?><?php if($_GET['mod']==""){echo $row_config['title_site'];}else { echo $row_titleart['titulo_articulo']." - ".$row_config['title_site'];}?></title>
 		<!-- DESCRIPCION DEL SITIO -->	
@@ -45,7 +45,6 @@ $tipoletra=$row_config['tipof_google'];
   
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.min.js"></script>		  
 		<script type="text/javascript" src="js/jquery.reveal.js"></script>		
-
 		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 		<script src="js/jquery-1.8.0.min.js" type="text/javascript"></script>
 		<script src="js/jquery.touchwipe.1.1.1.js" type="text/javascript"></script>
@@ -71,7 +70,6 @@ $tipoletra=$row_config['tipof_google'];
 		</script> 
 		
 		<!-- ZOOM DE LAS FOTOS DE LOS PRODUCTOS -->
-			<script src="js/jquery-1.6.js" type="text/javascript"></script>
 			<script src="js/jquery.jqzoom-core.js" type="text/javascript"></script>
 			<link rel="stylesheet" href="css/jquery.jqzoom.css" type="text/css">
 			<script type="text/javascript">
@@ -94,36 +92,15 @@ $tipoletra=$row_config['tipof_google'];
       </style>
       <!-- FIN DE TIPO DE LETRA -->
       
-      <!-- STYLOS Y ARCHIVOS DE GALERIA DE FOTOS -->
-      <?php if($_GET['galeria']=="") {?>
-      <?php }else {?>
-      <link rel="stylesheet" href="css/galleriffic-2.css" type="text/css" />
-		<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
-		<script type="text/javascript" src="js/jquery.galleriffic.js"></script>
-		<script type="text/javascript" src="js/jquery.opacityrollover.js"></script>
-		<!-- We only want the thunbnails to display when javascript is disabled -->
-		<script type="text/javascript">
-		document.write('<style>.noscript { display: none; }</style>');
-		</script>
-		<?php } ?>
-		
-<!-- PRODUCTOS DESTACADOS -->
-<?php if($_GET['mg']=="producto-detalle") {?>
-<?php }else {?>
-<?php if($_GET['galeria']=="") {?>
-	<link type="text/css" href="css/fancymoves.css" media="screen" charset="utf-8" rel="stylesheet"  />
-	<script type="text/javascript" src="js/destacado/slider.js" charset="utf-8"></script>
-	<script type="text/javascript" src="js/destacado/demo.js"></script>
-<?php } } ?>
-<!-- BANNERS -->
-<?php require_once('modules/inc/slidejs.inc.php'); ?>
 
-<!-- FORMATEAR TEXTOS ALIAS -->
-<?php require_once('modules/inc/crear_alias.inc.php'); ?>
+		<!-- BANNERS -->
+		<?php require_once('modules/inc/slidejs.inc.php'); ?>
 
-<!-- IMAGEN MODAL -->
-<?php require_once('modules/inc/imagen_modal.inc.php'); ?>
+		<!-- FORMATEAR TEXTOS ALIAS -->
+		<?php require_once('modules/inc/crear_alias.inc.php'); ?>
 
+		<!-- IMAGEN MODAL -->
+		<?php require_once('modules/inc/imagen_modal.inc.php'); ?>
 
 </head>	
 <body>
@@ -146,397 +123,308 @@ $tipoletra=$row_config['tipof_google'];
 	if ($numero==1){
 ?>
 		<script language="javascript" type="text/javascript">
-			document.getElementById("alerta").innerHTML = "<center><br><br><br>El navegador Internet Explorer no soporta los est&aacute;ndares de la W3C,<br> Por Favor Actualiza tu Navegador se le recomienda que utilice la &uacute;ltima versi&oacute;n de Firefox o Google Chrome... <a href='http://www.google.com/chromeframe/?redirect=true'>Activar Google Chrome</a>.<br><br></center>";
+			document.getElementById("alerta").innerHTML = "<center><br><br><br>El navegador Internet Explorer no soporta los est&aacute;ndares de la W3C,<br> Por Favor Actualiza tu Navegador se le recomienda que utilice la &uacute;ltima versi&oacute;n de Firefox o Google Chrome... <br><br></center>";
 		</script>
 <?php
 	}
 ?>
 
-
-<!-- BARRA FIJA TOP 
-<div id="barra_fija_top">
-	<?php require_once('modules/inc/menu_acceso.inc.php'); ?>
-</div>
-<div class="espaciador_top">&nbsp;</div>
--->
-
 <!-- HEADER 100% -->
-
 <div id="header100">
-   
-	<div id="contenedor_logo"> 
 
-   <div id="logo">  
-     <?php do { ?>		
+   	<div id="contenedor_logo"> 
+	    <div id="logo">  
+		    <?php do { ?>		
+				<div>		
+					<?php echo $row_position1['contenido']; ?>	
+				</div>		
+			<?php } while ($row_position1 = mysql_fetch_assoc($position1)); ?> 
+	   </div>
+
+	 	<div id="modulo_header">
+		    <?php do { ?>		
 				<div>		
 					<?php echo $row_position2['contenido']; ?>	
 				</div>		
-			<?php } while ($row_position2 = mysql_fetch_assoc($position2)); ?> 
-   </div>
-   <div id="modulo_header">
-    <?php do { ?>		
-		<div>		
-			<?php echo $row_position1['contenido']; ?>	
-		</div>		
-	<?php } while ($row_position1 = mysql_fetch_assoc($position1)); ?>    
-   
-   <?php /*
-	   <div style="float:right;"> 
-         </br>
-	      <img src="images/site/siguenos.png" alt="" >
-	      <img src="images/site/face.png" alt="" width="40">
-	      <img src="images/site/tw.png" alt="" width="40">
-	      <img src="images/site/go.png" alt="" width="40">
-         </br>
-	      
-		   <img src="images/site/buscar.png" alt="" >
-	   </div> 
-	   */ ?>              
-   </div>
-  
-  </div>
-  <div id="contenedor_menu">
-  <!-- MENU 1-->
-			<?php if($totalRows_menu1>0){ ?>
+			<?php } while ($row_position2 = mysql_fetch_assoc($position2)); ?>    
+		</div>
+   	</div> <!-- FIN HEADER 100% -->
+
+  	 <!-- MENU 1-->
+  	<div id="contenedor_menu">
+	 	<?php if($totalRows_menu1>0){ ?>
 			<div id="contenedor_menu1">
 				<div id="menu1">
 					<?php require_once('modules/inc/menu1.inc.php'); ?>	
 				</div>
 			</div>
-			<?php } ?>
-</div>
-</div>
-<?php //FIN HEADER 100?>
+		<?php } ?>
+	</div> <!-- FIN MENU 1-->
+
+</div> <!-- FIN HEADER 100% -->
+
   
-  
-
-
-	
-
 <!-- CONTENEDOR PRINCIPAL -->
 <div id="contenedor_principal">
 
+	<!-- CONTENIDO MODULO -->
+    <?php if($_GET['mg']==""){ if($_GET['mod']=="") {?>
+    	<?php if($totalRows_position3>0){ ?>
+			<div id="contenido_modulo">
+				<?php do { ?>		
+					<div>		
+						<?php echo $row_position3['contenido']; ?>	
+					</div>		
+				<?php } while ($row_position3 = mysql_fetch_assoc($position3));?> 
+			</div>	
+	<?php } } } ?> <!-- FIN CONTENIDO MODULO -->
 
-
-    
-     <!-- CONTENIDO MODULO -->
-      <?php if($_GET['mg']==""){ if($_GET['mod']=="") {?>
-     <?php if($totalRows_position7>0){ ?>
-		<div id="contenido_modulo">
-		
-			<?php do { ?>		
-				<div>		
-					<?php echo $row_position7['contenido']; ?>	
-				</div>		
-			<?php } while ($row_position7 = mysql_fetch_assoc($position7));?> 
-		</div>	
-		<?php } } } ?>
-<!-- FIN CONTENIDO MODULO -->
 	
 	
-
-	<!-- CONTAINER BANNER 2 -->
-	<?php if($totalRows_banner2>0){ ?>
-	<div id="contenedor_banner2">
-	<!--  BANNER PRINCIPAL 2 -->
-		<div id="banner2">
-		<div id="slides2">
-		 <?php do { ?>		
-					
-					<img src="imagesmg/<?php echo $row_banner2['ruta']; ?>" alt="" >	
-					
-			<?php } while ($row_banner2 = mysql_fetch_assoc($banner2)); ?> 
-		</div> 
-		</div>
-
-	<?php } ?>
-	
-	<!-- MENU 2 -->
-	<?php if($totalRows_menu2>0){ ?>
-	<div id="menu2">
-		<?php require_once('modules/inc/menu2.inc.php'); ?>	
-	</div>
-	<?php } ?>
-	<?php /*
 	<!-- CONTENEDOR MODULOS 1 -->
-	<?php if($totalRows_position9>0){ ?>
+	<?php if($totalRows_position4>0){ ?>
 	<div id="contenedor_modulos">
 	
 		<!-- MOD1 -->
 		<div id="mod1">
 			<?php do { ?>		
 				<div>		
-					<?php echo $row_position9['contenido']; ?>	
+					<?php echo $row_position4['contenido']; ?>	
 				</div>		
-			<?php } while ($row_position9 = mysql_fetch_assoc($position9)); ?> 
+			<?php } while ($row_position4 = mysql_fetch_assoc($position4)); ?> 
 		</div>
+
 		<!-- MOD2 -->
 		<div id="mod2">
-			<?php do { ?>		
-				<div>		
-					<?php echo $row_position10['contenido']; ?>	
-				</div>		
-			<?php } while ($row_position10 = mysql_fetch_assoc($position10)); ?> 
-		
-		</div>
-		<!-- MOD3 -->
-		<div id="mod3">
-			<?php do { ?>		
-				<div>		
-					<?php echo $row_position11['contenido']; ?>	
-				</div>		
-			<?php } while ($row_position11 = mysql_fetch_assoc($position11)); ?> 
-		
-		</div>
-		
-	</div> <!-- FIN CONTENEDOR MODULOS -->
-	<?php } ?>
-	*/ ?>
-	<!-- CONTENEDOR CENTRAL -->
-	<div id="contenedor_central">
-     <?php if($_GET['mg']=="categoria-de-productos"){?>
-       <?php echo $row_cate['des_cate'];?>
-     <?php } ?>
-	
-	   <?php if($_GET['galeria']=="") {?>
-		<!-- MODULO DERECHA -->
-		<?php if($totalRows_position12>0){ ?>
-		<div id="izquierda">
-		  <?php if($row_config['tienda']==99) { ?>
-			 <p class="p20_fantasy">Productos Destacados</p>
-			 <?php require_once('modules/productos/productos_destacado.inc.php'); ?>
-		  <?php } ?>
-			<?php do { ?>		
-				<div>		
-					<?php echo $row_position12['contenido']; ?>	
-				</div>		
-			<?php } while ($row_position12 = mysql_fetch_assoc($position12)); ?> 
-		</div>
-		<?php } ?>
-		<!-- ********* CONTENIDO  ********** -->
-		
-		<div id="contenido">
-		
-<!-- BANNER PRINCIPAL 1 -->
- <?php if(($_GET['mg']=="")and($_GET['mod']=="")){	
- 	?>
-	<?php if($totalRows_banner1>0){ ?>
-	<div id="conten_banner">
-	<div id="banner1">
-	<?php  if($_GET['mg']=="contacto") { ?>
-	  <iframe height="400" src="https://mapsengine.google.com/map/u/0/embed?mid=zi7yOkwfoqEo.kokPsRMfkpAM" width="100%"></iframe>
-	<?php }else { ?>
-	<div id="slides">
-	   <div class="callbacks_container">
-       <ul class="rslides" id="slider1">		 
-		 <?php do { ?>
-		 <?php if($row_banner1['titulo_foto']=="") {?>
-           <li><img src="imagesmg/<?php echo $row_banner1['ruta']; ?>" alt="" />
-           <?php if($row_banner1['info']=="") { }else {?><p class="caption"><?php echo $row_banner1['info'];} ?></p>           
-           </li>
-           				
-       <?php }else {?>       
-           <li><a href="<?php echo $row_banner1['titulo_foto']; ?>"><img src="imagesmg/<?php echo $row_banner1['ruta']; ?>" alt="" /></a>
-            <?php if($row_banner1['info']=="") { }else {?><p class="caption"><a href="<?php echo $row_banner1['titulo_foto']; ?>"><?php echo $row_banner1['info'];} ?></a>          
-           </li>
-       <?php } ?>   
-			<?php } while ($row_banner1 = mysql_fetch_assoc($banner1)); ?>
-		</ul> 
-	</div>
-	</div>
-	<?php } /* FIN CONDICION MAPA GOOGLE */ ?>
-	</div>
-	</div>
-	<?php } } ?>
-			
-		
-		 <div id="Link">&nbsp;</div>
-			<!-- CONTEN  TOP -->
-  
-		  <div style="width:100%;float:left;">
-		   <div id="slides3">
-			<?php do { ?>		
-					
-					<?php echo $row_position4['contenido']; ?>	
-				
-			<?php } while ($row_position4 = mysql_fetch_assoc($position4)); ?> 
-		  </div>
-		  </div>
-		  
-		  <!-- CONTENIDO PRINCIPAL -->
-			<div id="idDiv">
-			
-			<?php // ************* MODULOS DEL SISTEMA *************
-             require_once('modules/inc/contenido_modulos.inc.php'); 
-              // ********** FIN MODULOS **************        
-          ?>				
-			</div>
-			
-			<!-- CONTEN ABAJO IZQUIERDA -->
-		 <div style="width:100%;float:left;">
-		  <div style="width:48%;float:left;margin-right:2%;">
 			<?php do { ?>		
 				<div>		
 					<?php echo $row_position5['contenido']; ?>	
 				</div>		
 			<?php } while ($row_position5 = mysql_fetch_assoc($position5)); ?> 
-		 </div>			
-			
-					
-			<!-- CONTEN ABAJO DERECHA -->
-		 <div style="width:48%;float:left;margin-left:2%;">			
+		</div>
+
+		<!-- MOD3 -->
+		<div id="mod3">
 			<?php do { ?>		
 				<div>		
 					<?php echo $row_position6['contenido']; ?>	
 				</div>		
-			<?php } while ($row_position6 = mysql_fetch_assoc($position6)); ?>
+			<?php } while ($row_position6 = mysql_fetch_assoc($position6)); ?> 
+		</div>
+		
+	</div> <!-- FIN CONTENEDOR MODULOS -->
+
+
+	<!-- CONTENEDOR CENTRAL -->
+	<div id="contenedor_central">
+	    <?php if($_GET['mg']=="categoria-de-productos"){?>
+	    	<?php echo $row_cate['des_cate'];?>
+	    <?php } ?>
+	
+
+	<!-- ********* CONTENIDO  ********** -->
+	<div id="contenido">
+		
+	<!-- BANNER PRINCIPAL 1 -->
+ 	<?php if(($_GET['mg']=="")and($_GET['mod']=="")){ ?>
+		<?php if($totalRows_banner1>0){ ?>
+			<div id="conten_banner">
+				<div id="banner1">
+					<div id="slides">
+	   					<div class="callbacks_container">
+       						<ul class="rslides" id="slider1">		 
+								<?php do { ?>
+		 							<?php if($row_banner1['titulo_foto']=="") {?>
+           								<li>
+           									<img src="imagesmg/<?php echo $row_banner1['ruta']; ?>" alt="" />
+           									<?php if($row_banner1['info']=="") { }else {?><p class="caption"><?php echo $row_banner1['info'];} ?></p>           
+           								</li>
+           							<?php }else {?>       
+           								<li>
+           									<a href="<?php echo $row_banner1['titulo_foto']; ?>"><img src="imagesmg/<?php echo $row_banner1['ruta']; ?>" alt="" /></a>
+            								<?php if($row_banner1['info']=="") { }else {?><p class="caption"><a href="<?php echo $row_banner1['titulo_foto']; ?>"><?php echo $row_banner1['info'];} ?></a>          
+           								</li>
+       								<?php } ?>   
+								<?php } while ($row_banner1 = mysql_fetch_assoc($banner1)); ?>
+							</ul> 
+						</div>
+					</div>
+				</div>
 			</div>
-		   </div>
-		 <!-- CONTEN ABAJO -->			 
-			<div style="width:100%;float:left;">		
-					<?php do { ?>		
+	<?php } } ?>  <!-- FIN BANNER PRINCIPAL 1 -->
+			
+		
+	<!-- CONTEN  TOP -->
+	<div style="width:100%;float:left;">
+		<div id="slides3">
+			<?php do { ?>		
+				<?php echo $row_position7['contenido']; ?>	
+			<?php } while ($row_position7 = mysql_fetch_assoc($position7)); ?> 
+		</div>
+	</div> <!-- FIN CONTEN TOP --> 
+		  
+	<!-- CONTENIDO PRINCIPAL -->
+	<div id="idDiv">
+		<?php // ************* MODULOS DEL SISTEMA *************
+	        require_once('modules/inc/contenido_modulos.inc.php'); 
+	    // ********** FIN MODULOS **************  ?>				
+	</div>
+			
+	<!-- CONTEN CENTRAL ABAJO -->
+	<div style="width:100%;float:left;">
+
+		<!-- CONTEN CENTRAL ABAJO IZQUIERDA -->
+		<div style="width:48%;float:left;margin-right:2%;">
+			<?php do { ?>		
 				<div>		
 					<?php echo $row_position8['contenido']; ?>	
 				</div>		
-			<?php } while ($row_position8 = mysql_fetch_assoc($position8)); ?>
-			</div>
-
-</div>
-		<!-- MODULO IZQUIERDA -->
-		
-		<div id="derecha">
-
-		 	   
-			<?php do { ?>
-			
-				<div  id="div_derecha">		
-					<?php echo $row_position13['contenido']; ?>	
+			<?php } while ($row_position8 = mysql_fetch_assoc($position8)); ?> 
+		</div>			
+					
+		<!-- CONTEN CENTRAL ABAJO DERECHA -->
+		<div style="width:48%;float:left;margin-left:2%;">			
+			<?php do { ?>		
+				<div>		
+					<?php echo $row_position9['contenido']; ?>	
 				</div>		
-			<?php } while ($row_position13 = mysql_fetch_assoc($position13)); ?>
-			 
-
+			<?php } while ($row_position9 = mysql_fetch_assoc($position9)); ?>
 		</div>
+
+	</div> <!-- FIN CONTEN CENTRAL ABAJO -->
+
+	<!-- CONTEN ABAJO 100 -->			 
+	<div style="width:100%;float:left;">		
+		<?php do { ?>		
+			<div>		
+				<?php echo $row_position10['contenido']; ?>	
+			</div>		
+		<?php } while ($row_position10 = mysql_fetch_assoc($position10)); ?>
+	</div> <!-- FIN CONTEN ABAJO 100 -->
+
+	</div> <!-- FIN CONTENIDO -->
+
+	<!-- MODULO DERECHA -->
+	<div id="derecha">
+		<?php do { ?>
+			<div  id="div_derecha">		
+				<?php echo $row_position11['contenido']; ?>	
+			</div>		
+		<?php } while ($row_position11 = mysql_fetch_assoc($position11)); ?>
+	</div> <!-- FIN MODULO DERECHA -->
 		
-<?php }else { /* ACTIVANDO LA GALERIA*/?>
-		<?php require_once('modules/inc/galeria.inc.php'); ?>
-<?php } ?>		
 	</div> <!-- FIN CONTENEDOR CENTRAL -->
 	
-	<!-- BANNER 3 -->
-
+	<!-- MODULO 100 ABAJO (BANNER3) -->
 	<div id="banner3">
 		<?php do { ?>		
-				<div>		
-					<?php echo $row_position14['contenido']; ?>	
-				</div>		
-			<?php } while ($row_position14 = mysql_fetch_assoc($position14)); ?> 
-			
-				<!-- Slider -->
-				<?php if($_GET['galeria']=="") {?>
-				<?php if($_GET['mg']=="") {?>
-				<?php if($totalRows_producto_des>0) {?>
-				<h1>Aprovecha nuestras Ofertas!</h1>
-	         <div id="slider-one">
-               <?php if($row_config['tienda']==1) { ?>
-					  <?php require_once('modules/productos/productos_destacado.inc.php'); ?>
-  				  <?php } ?>
-					
-				</div><br><br><br>
-				<!-- /Slider -->	
-	        <?php } } }?>
-	</div>
+			<div>		
+				<?php echo $row_position12['contenido']; ?>	
+			</div>		
+		<?php } while ($row_position12 = mysql_fetch_assoc($position12)); ?> 
+	</div> <!-- FIN MODULO 100 ABAJO (BANNER3) -->
 
 	
 	<!-- CONTENEDOR ABAJO -->
-	<?php if($totalRows_position15>0){ ?>
-	<div id="contenedor_abajo">
-		<!-- MOD4 -->
-		<div id="mod4">
-			<?php do { ?>		
-				<div>		
-					<?php echo $row_position15['contenido']; ?>	
-				</div>		
-			<?php } while ($row_position15 = mysql_fetch_assoc($position15)); ?>
-		</div>
-		<!-- MOD5 -->
-		<div id="mod5">
-			<?php do { ?>		
+	<?php if($totalRows_position13>0){ ?>
+		<div id="contenedor_abajo">
+		
+			<!-- MOD4 -->
+			<div id="mod4">
+				<?php do { ?>		
+					<div>		
+						<?php echo $row_position13['contenido']; ?>	
+					</div>		
+				<?php } while ($row_position13 = mysql_fetch_assoc($position13)); ?>
+			</div>
+
+			<!-- MOD5 -->
+			<div id="mod5">
+				<?php do { ?>		
+					<div>		
+						<?php echo $row_position14['contenido']; ?>	
+					</div>		
+				<?php } while ($row_position14 = mysql_fetch_assoc($position14)); ?>
+			</div>
+
+			<!-- MOD6 -->
+			<div id="mod6">
+				<?php do { ?>		
+					<div>		
+						<?php echo $row_position15['contenido']; ?>	
+					</div>		
+				<?php } while ($row_position15 = mysql_fetch_assoc($position15)); ?>
+			</div>
+
+		</div> 	
+	<?php } ?> <!-- FIN CONTENEDOR ABAJO -->
+
+	<!-- CREDITOS 1 -->
+	<?php if($totalRows_position16>0){ ?>
+ 	<div id="creditos">
+ 		<?php do { ?>		
 				<div>		
 					<?php echo $row_position16['contenido']; ?>	
 				</div>		
 			<?php } while ($row_position16 = mysql_fetch_assoc($position16)); ?>
-		</div>
-		<!-- MOD6 -->
-		<div id="mod6">
-			<?php do { ?>		
-				<div>		
-					<?php echo $row_position17['contenido']; ?>	
-				</div>		
-			<?php } while ($row_position17 = mysql_fetch_assoc($position17)); ?>
-		</div>
-	</div> <!-- FIN CONTENEDOR ABAJO -->	
-	<?php } ?>
-	<!-- CREDITOS -->
-	<?php if($totalRows_position18>0){ ?>
- 	<div id="creditos">
- 		<?php do { ?>		
-				<div>		
-					<?php echo $row_position18['contenido']; ?>	
-				</div>		
-			<?php } while ($row_position18 = mysql_fetch_assoc($position18)); ?>
  	</div>
- 	<?php } ?>
-<div class="final"></div>
+ 	<?php } ?> <!-- FIN CREDITOS 1 -->
+
+	<div class="final"></div>
+
 </div> <!-- FIN CONTENEDOR PRINCIPAL -->
+
 	
 <!-- CONTENEDOR ABAJO 100% -->
-<?php if($totalRows_position19>0){ ?>
+<?php if($totalRows_position17>0){ ?>
 <div id="cintillo_abajo_color"></div>
-<div id="contenedor_abajo100">
-	<!-- MOD7 -->
-	<div id="mod7">
-		<?php do { ?>		
-				<div>		
-					<?php echo $row_position19['contenido']; ?>	
-				</div>		
-			<?php } while ($row_position19 = mysql_fetch_assoc($position19)); ?>
-	</div>
-	<!-- MOD8 -->
-	<div id="mod8">
-		<?php do { ?>		
-				<div>		
-					<?php echo $row_position20['contenido']; ?>	
-				</div>		
-			<?php } while ($row_position20 = mysql_fetch_assoc($position20)); ?>
-	</div>
-	<!-- MOD9 -->
-	<div id="mod9">
+	<div id="contenedor_abajo100">
+		
+		<!-- MOD7 -->
+		<div id="mod7">
 			<?php do { ?>		
-				<div>		
-					<?php echo $row_position21['contenido']; ?>	
-				</div>		
-			<?php } while ($row_position21 = mysql_fetch_assoc($position21)); ?>
-	</div>
-</div> <!-- FIN CONTENEDOR ABAJO 100% -->
+					<div>		
+						<?php echo $row_position17['contenido']; ?>	
+					</div>		
+				<?php } while ($row_position17 = mysql_fetch_assoc($position17)); ?>
+		</div>
 
-<?php }?>	
+		<!-- MOD8 -->
+		<div id="mod8">
+			<?php do { ?>		
+					<div>		
+						<?php echo $row_position18['contenido']; ?>	
+					</div>		
+				<?php } while ($row_position18 = mysql_fetch_assoc($position18)); ?>
+		</div>
+
+		<!-- MOD9 -->
+		<div id="mod9">
+				<?php do { ?>		
+					<div>		
+						<?php echo $row_position19['contenido']; ?>	
+					</div>		
+				<?php } while ($row_position19 = mysql_fetch_assoc($position19)); ?>
+		</div>
+
+	</div> 
+<?php }?>	<!-- FIN CONTENEDOR ABAJO 100% -->
+
 <!-- CREDITOS 100% -->
-<?php if($totalRows_position22>0){ ?>
+<?php if($totalRows_position20>0){ ?>
 <div id="creditos100">
-<div id="contenido100">
+	<div id="contenido100">
  		<?php do { ?>		
-				<div>		
-					<?php echo $row_position22['contenido']; ?>	
-				</div>		
-			<?php } while ($row_position22 = mysql_fetch_assoc($position22)); ?>
+			<div>		
+				<?php echo $row_position20['contenido']; ?>	
+			</div>		
+		<?php } while ($row_position20 = mysql_fetch_assoc($position20)); ?>
+	</div>
 </div>
-</div>
-<?php } ?>
+<?php } ?> <!-- FIN CREDITOS 100% -->
 
 
 <!-- SCRIPT -->
-<!-- SCRIPT DE GALERIA DE FOTOS -->
-<?php require_once('modules/inc/script_galeria.inc.php'); ?>
           
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script> 
 <script src="js/plugins.js"></script>		
