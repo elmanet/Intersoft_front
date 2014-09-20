@@ -1,0 +1,1419 @@
+/*----------------------------------------------------------------------------------------------
+joomla.css: Este archivo contiene los estilos para las clases e id que devuelve el core de Joomla.
+-----------------------------------------------------------------------------------------------*/
+
+
+/* ++++++++++++++ Blog en Pagina Inicial por defecto  ++++++++++++++ */
+
+.blog-featured
+{
+        padding: 8px;
+}
+
+.items-leading
+{
+        padding:0px 5px 10px 5px;
+        overflow:hidden;
+        margin-bottom:10px
+}
+
+.row-separator
+{
+        display: block;
+        clear: both;
+        margin: 0;
+        border: 0px;
+        height:1px
+}
+
+.item-separator
+{
+        display: none;
+        margin: 0px;
+}
+
+.shownocolumns
+{
+        width:98% !important;
+}
+
+#top
+{
+        margin:0 0 20px 0;
+        overflow:hidden
+}
+
+/* ++++++++++++++  blog  ++++++++++++++ */
+
+.cols-1
+{
+        display: block;
+        float: none !important;
+        margin: 0 !important;
+}
+
+.cols-2 .column-1
+{
+        width:46%;
+        float:left;
+        background-color: #f2f2f2;
+border: 2px solid;
+width: 240px;
+padding-top: 20px;
+padding-left: 15px;
+border-radius: 10px;
+margin-left:80px;
+}
+
+.cols-2 .column-2
+{
+        width:46%;
+        float:right;
+        margin:0;
+        background-color: #f2f2f2;
+border: 2px solid;
+width: 240px;
+padding-top: 20px;
+padding-left: 15px;
+border-radius: 10px;
+margin-right:50px;
+        
+}
+
+.cols-3 .column-1
+{
+        float:left;
+        width:29%;
+        padding:0px 5px;
+        margin-right:4%
+
+}
+.cols-3 .column-2
+{
+        float:left;
+        width:29%;
+        margin-left:0;
+        padding:0px 5px
+}
+.cols-3 .column-3
+{
+        float:right;
+        width:29%;
+        padding:0px 5px
+}
+
+.items-row
+{
+        overflow:hidden;
+        margin-bottom:10px !important;
+}
+
+.column-1,
+.column-2,
+.column-3
+{
+        padding:10px 5px
+}
+
+.column-2
+{
+        width:55%;
+        margin-left:40%;
+}
+
+.column-3
+{
+        width:30%
+}
+
+.blog-more
+{
+        padding:10px 5px
+}
+
+/* ++++++++++++++  Contenido Principal  ++++++++++++++ */
+
+.item
+{
+        padding:0px 5px 10px 5px;
+        display:block
+}
+
+.item h2
+{
+        margin:0 0px 10px 0px
+}
+
+.item-page
+{
+        padding:15px;
+        display:block;
+        overflow:hidden;
+    position:relative;
+}
+/*Corrije bug de salida de codigo*/
+.content-links{
+  display:none;
+  }
+
+/*Botones email, imprimir*/
+
+.actions {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.item-page .actions li{
+  background:none;
+  padding:0;
+}
+
+.actions .print-icon {
+    float: right;
+    margin: 0 5px;
+}
+.actions .email-icon{
+    float: right;
+    margin: 0 5px;
+
+}
+/*Detalles de articulo: categoria, visto*/
+.iteminfo {
+    color: #999999;
+    display: block;
+    font-size: 12px;
+    line-height: 13px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* h1 on frontpage y vista blog */
+
+.blog-featured h1,
+.blog h1{
+  margin:0 0px 10px 0px
+}
+
+
+.blog .category-desc{
+        padding:0 5px;
+        margin:10px 0 25px
+}
+
+.blog .cat-children .category-desc{
+        padding:0 0px;
+        margin:10px 0 25px
+}
+
+
+.items-row h2{
+        font-weight:normal;
+        padding:5px 2px 5px 2px;
+        font-size:1.4em
+}
+ul.subcategories{
+        margin:20px 20px 20px 10px
+}
+.subcategories-link{
+        font-weight:bold
+}
+.category-list{
+        padding:0 5px;
+        display:block;
+}
+.category-list h1{
+        margin-left:-5px;
+        margin-right:-5px;
+}
+
+.categories-list{
+        padding:0 5px
+}
+.categories-list ul{
+        margin:0px 0 0 20px;
+        padding:0
+}
+.categories-list ul li{
+        padding: 5px;
+}
+ .categories-list ul ul{
+        margin-left:15px
+}
+.categories-list dl dt,
+.categories-list dl dd{
+  display:inline
+}
+
+.category-desc{
+        line-height:1.7em;
+        margin:10px 0;
+        padding-left:0px
+}
+
+.small{
+        font-size:0.85em;
+        margin:0 0 20px;
+}
+
+.image-left{
+        float:left;
+        margin:0 15px 5px 0;
+}
+
+.image-right{
+        float:right;
+        margin:0 0 5px 15px
+}
+
+.archive{
+        padding:0 5px
+}
+
+.archive form{
+        padding:0 5px
+}
+
+ul#archive-items{
+        margin:20px 0 20px 0px;
+        list-style-type:none;
+        padding:0
+}
+
+ul#archive-items li.row0,
+ul#archive-items li.row1{
+        padding:10px 0;
+        margin:10px 0;
+}
+
+/* ++++++++++++++  Articulo Lider  ++++++++++++++ */
+.items-leading h2
+{
+        font-size:1.4em;
+        font-weight:normal;
+        padding:5px 0px
+}
+
+/* ++++++++++++++  Leer mas  ++++++++++++++ */
+.readmore a{
+        font-weight:bold;
+        padding:2px 5px 2px 10px;
+        display:inline-block;
+        margin-top:5px;
+        text-decoration:none;
+        width:150px;
+        height:60px;
+        background:url('../../../images/site/boton_detalles.png') no-repeat;
+}
+
+.readmore a:hover
+{
+   background:url('../../../images/site/boton_detalles2.png') no-repeat;
+}
+
+/* ###########  Lista de Categorias ############ */
+.categories-listalphabet ul{
+padding:0;
+margin:20px 10px 10px 0;
+list-style-type:none;
+list-style-position:inside
+ }
+.categories-listalphabet ul li{
+display :inline;
+padding:5px;
+border-right:solid 1px #ddd
+}
+
+.categories-list ul
+{list-style-type:none;
+margin:0
+}
+
+.cat-children{
+padding-left:5px
+}
+.cat-children ul dl dt,
+.cat-children ul dl dd{
+ display:inline
+ }
+.cat-children ul{
+list-style-type:none;
+ margin:0;
+ padding:0;
+}
+.cat-children ul{
+margin:20px 20px 20px 0;
+}
+.cat-children ul ul{
+margin:20px
+}
+.cat-children ul li{
+ margin:10px 0 10px 0
+ }
+
+
+
+
+/*Imagen Principal de Articulos  ---*/
+div.img_caption { margin-top: 20px; }
+
+.img_caption.left { margin-right: 20px; }
+
+div.img_caption img {
+  background: #d6e4ec;
+  border: 1px solid #90CAE0;
+  padding: 4px;
+}
+
+p.img_caption { color: #999; padding-top: 2px; text-transform: uppercase; }
+
+.article-image {
+  float: left;
+  width: 130px;
+}
+
+.img-fulltext-left {
+  float: left;
+}
+
+.img-fulltext-right {
+  float: right;
+}
+
+p.article-image  {
+  width: 220px;
+}
+.article-image img {
+  background: #d6e4ec;
+  border: 1px solid #90CAE0;
+  clear: both;
+  display: block;
+  padding: 4px;
+  margin: 20px 0 0;
+}
+
+/* ++++++++++++++  image float style ++++++++++++++ */
+.img-fulltext-left {
+  float:left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.img-intro-left {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.img-fulltext-right {
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.img-intro-right {
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.img-fulltext-none img {
+  display:block;
+  margin:10px auto;
+}
+
+.img-intro-none img {
+    display:block;
+  clear: both;
+  margin:10px auto;
+  background: #d6e4ec;
+  border: 1px solid #90CAE0;
+  
+  padding: 4px;
+}
+
+.img-fulltext-left img,
+.img-fulltext-right img,
+.img-fulltext-none img,
+.img-intro-none img{
+  background: #d6e4ec;
+  border: 1px solid #90CAE0;
+  clear: both;
+  display: block;
+  padding: 4px;
+  margin: 0 15px img-intro-none 0;
+}
+
+.article-image-right img.right {
+  margin-left: 15px;
+}
+
+.img-fulltext-right img {
+  margin: 0 0 0 15px;
+}
+
+.item-page p.article-image img {
+  margin: 10px 15px 0px 0px;
+}
+
+
+
+.blog .article-image {
+  float: none; 
+  width: auto;
+}
+.blog .article-image img {
+  background: #d6e4ec;
+  border: 1px solid #90CAE0;
+  display: inline-block;
+  padding: 4px;
+  margin: 0px 0px 0px 15px;
+}
+
+
+
+/* ##########################  Breadcrumbs: Ruta de Navegacion  ########################### */
+
+  #breadcrumbs{
+    clear: both;
+    display: block;
+    font-size: 11px;
+    margin: 0px 0 20px;
+    padding: 7px 0;
+  color: #B7B7B7;
+    }
+    
+  .breadcrumbs a {
+    color: #B7B7B7;
+    margin-left: 0;
+    text-decoration: none;
+     }
+
+   .breadcrumbs{
+    display:inline;
+    border-bottom: 1px solid #b6b0b9;
+    border-top: 1px solid #b6b0b9;
+    position: relative;
+    top: 4px;      
+   }
+   .breadcrumbs img{
+     margin:0 5px;  
+   }
+  
+  
+
+/* ++++++++++++++  Detalles de articulo  ++++++++++++++ */
+
+.article-info{
+        margin:10px 0 10px 0px;
+        font-size:0.9em;
+}
+
+.article-info-term{
+        display:none
+}
+
+dt.category-name,
+dt.create,
+dt.modified,
+dt.createdby{
+        float:left;
+        padding-right:5px;
+}
+
+.archive .article-info dd,
+.article-info dd{
+        margin:2px 0 0px 0;
+        line-height:1.2em
+}
+
+dd.createdby{
+
+}
+
+.article-info dd span{
+    text-transform:none;
+    display:inline-block;
+    padding:0 5px 0 0px;
+    margin:0 10px 0 0px;
+}
+
+
+
+/* ++++++++++++++  items more  ++++++++++++++ */
+
+.items-more{
+        padding-top:10px;
+}
+
+.items-more h3{
+        font-weight:normal;
+        margin:0;
+        padding:5px 5px 5px 5px;
+        font-size:1.4em}
+
+.items-more ol{
+        line-height:1.3em;
+        list-style-type:none;
+        margin:0;
+        padding:10px 0 10px 2px;
+}
+
+.items-more ol li{
+        padding:2px;
+}
+
+.items-more ol li a{
+        display:inline;
+        margin:0;
+        font-weight:normal;
+        padding:5px 5px 5px 20px;
+}
+
+.items-more ol li a:hover,
+.items-more ol li a:active,
+.items-more ol li a:focus{
+        font-weight:normal;
+        padding:5px 5px 5px 20px;
+        text-decoration:none
+}
+
+
+/* ++++++++++++++  pagination  ++++++++++++++ */
+
+.pagination{
+        margin:10px 0 ;
+        padding:10px 0 10px 0px;
+        clear:both;
+}
+
+.pagination ul{
+        list-style-type:none;
+        margin:0;
+        padding:0;
+        text-align:left;
+}
+
+.pagination li{
+        display:inline;
+        padding:2px 5px;
+        text-align:left;
+        border:solid 0px #eee;
+        margin:0 2px}
+
+.pagenav{
+padding:2px; clear: both;
+}
+
+.pagination li.pagination-start,
+.pagination li.pagination-next,
+.pagination li.pagination-end,
+.pagination li.pagination-prev{
+border:0
+}
+
+.pagination li.pagination-start ,
+.pagination li.pagination-start  span{
+padding:0
+}
+p.counter{
+font-weight:bold;
+}
+
+
+/*  ####################   Forumlarios generados por Joomla   #####################  */
+
+#member-registration{
+ padding:0 5px
+}
+#member-registration fieldset{
+border:solid 0px #ddd
+}
+
+form fieldset dt{
+        clear:left ;
+        float:left;
+        width:12em;
+        padding:3px 0
+}
+form fieldset dd{
+        float:left;
+        padding:3px 0
+}
+
+/* ########################## pagina de Busaqueda ############################ */
+.searchintro{
+        font-weight:normal;
+        margin:20px 0 20px;
+}
+
+#searchForm,
+#finder-search{
+        padding:0 5px
+}
+
+.form-limit{
+        margin:20px 0 0;
+        text-align:right;
+        padding:0 10px 0 20px;
+}
+
+.inputbox:focus{
+}
+
+.highlight{
+        font-weight:bold;
+}
+
+.ordering-box{
+        width:40%;
+        float:right;
+}
+
+.phrases-box{
+        width:60%;
+        float:left
+}
+
+.only,
+.phrases{
+        margin:10px 0 0 0px;
+        padding:15px ;
+        line-height:1.3em;
+}
+
+label.ordering{
+        display:block;
+        margin:10px 0 10px 0
+}
+
+.word{
+        padding:10px 10px 10px 0;
+}
+
+.word input{
+        font-weight:bold;
+        margin:0px 10px 0px 10px;
+        padding:4px;
+        font-size:1em
+}
+
+.word input:focus{
+        margin:0 0 0 9px;
+}
+
+.word label{
+    font-weight:bold
+}
+
+fieldset.only label,
+fieldset.phrases label{
+    margin:0 10px 0 0px
+}
+
+.ordering-box label.ordering{
+    margin:0 10px 5px 0;
+    float:left
+}
+form .search label,
+form .finder label{
+        display:none
+}
+
+form #finder-filter-select-list label{
+        display:block;
+        margin-top: 10px;
+        margin-bottom: 2px;
+}
+
+.search legend{
+  font-weight:bold
+  }
+.phrases .inputbox{
+        width:10em;
+}
+
+.phrases .inputbox option{
+        padding:2px;
+}
+
+
+/* ++++++++++++++  Resultados de Busqueda  ++++++++++++++++++ */
+
+dl.search-results{
+
+}
+
+dl.search-results dt.result-title{
+        padding:15px 15px 0px 5px;
+        font-weight:bold;
+}
+
+dl.search-results dd{
+        padding:2px 15px 2px 5px
+}
+
+dl.search-results dd.result-text{
+        padding:10px 15px 10px 5px;
+        line-height:1.7em
+}
+
+dl.search-results dd.result-url{
+        font-size:90%;
+        padding:2px 15px 15px 5px;
+}
+
+dl.search-results dd.result-created{
+        padding:2px 15px 15px 5px
+}
+
+dl.search-results dd.result-category{
+   padding:10px 15px 5px 5px
+}
+
+/* ########################### Formulario de Contacto ########################### */
+
+.contact{
+        padding:15px
+}
+
+.contact-category{
+        padding:0 10px
+}
+
+.contact-category  #adminForm fieldset.filters{
+  border:0;
+  padding:0
+}
+
+.contact-image{
+  margin:10px 0;
+  overflow:hidden;
+}
+
+.contact-image img{
+float:right;
+}
+
+
+address{
+     font-style:normal;
+        margin:10px 0;
+}
+
+address span{
+        display:block
+}
+.contact-address{
+margin:20px 0 10px 0;
+}
+
+
+.contact-email div{
+        padding:2px 0;
+        margin:0 0 10px 0;
+}
+
+.contact-email label{
+        width:17em;
+        float:left;
+}
+span.contact-image{
+    margin-bottom:10px;
+    overflow:hidden;
+    display:block
+}
+#contact-textmsg{
+  padding: 2px 0 10px 0
+  }
+
+#contact-email-copy{
+        float:left;
+        margin-right:10px;
+}
+
+.contact .button{
+        float:none !important;
+        clear:left;
+        display:block;
+        margin:20px 0 0 0
+}
+dl.tabs{
+    float: left;
+    margin: 50px 0 0 0;
+    z-index: 50;
+    clear:both;
+}
+
+dl.tabs dt{
+    float: left;
+    padding: 4px 10px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    margin-right: 3px;
+    background: #f0f0f0;
+    color: #666;
+}
+
+dl.tabs dt.open {
+    background: #F9F9F9;
+    border-bottom: 1px solid #F9F9F9;
+    z-index: 100;
+    color: #000;
+
+}
+
+div.current {
+    clear: both;
+    border: 1px solid #ccc;
+    padding: 10px 10px;
+}
+
+
+div.current dd {
+    padding: 0;
+    margin: 0;
+}
+
+dl#content-pane.tabs {
+    margin: 1px 0 0 0;
+}
+
+
+/* ##########################  Perfil de Usuario ########################### */
+
+#users-profile-core,
+#users-profile-custom{
+        margin:10px 0 15px 0;
+        padding:15px;
+}
+
+#users-profile-core dt,
+#users-profile-custom dt{
+        float:left;
+        width:12em;
+        padding:3px 0;
+}
+
+#users-profile-core dd,
+#users-profile-custom dd{
+        padding:3px 0;
+}
+
+#member-profile fieldset,
+.registration fieldset{
+        margin:10px 0 15px 0;
+        padding:15px;
+}
+
+#users-profile-core legend,
+#users-profile-custom legend,
+.profile-edit legend,
+.registration legend{
+    font-weight:bold
+}
+
+.profile-edit form#member-profile fieldset dd,
+.registration form#member-registration fieldset dd
+{ float:none; padding:5px 0}
+
+.profile-edit form#member-profile fieldset dd input,
+.profile-edit form#member-profile fieldset dd select,
+.registration form#member-registration fieldset dd input
+{width:17em}
+.profile-edit form#member-profile fieldset dt,
+.registration form#member-registration fieldset dt
+{padding:5px 5px 5px 0; width:13em}
+
+span.optional
+{font-size:0.9em}
+/*#################### Tablas generadas por Joomla ############################ */
+
+table{
+        border-collapse:collapse
+}
+
+table.weblinks,
+table.category{
+        font-size:1em;
+        margin:10px 10px 20px 0px;
+        width:99%;
+}
+
+table.weblinks td{
+        border-collapse:collapse;
+}
+
+table.weblinks td,
+table.category td{
+        padding:7px;
+}
+
+table.weblinks th,
+table.category th{
+        padding:7px;
+        text-align:left
+}
+
+td.num{
+        vertical-align:top;
+        text-align:left;
+}
+
+td.hits{
+        vertical-align:top;
+        text-align:center
+}
+
+td p{
+        margin:0;
+        line-height:1.3em
+}
+
+.filter{
+        margin:10px 0
+}
+
+.display-limit,
+.filter{
+        text-align:right;
+        margin-right:7px
+}
+
+
+/* ++++++++++++++  Tabla de categorias  ++++++++++++++ */
+
+table.category th a img{
+        padding:2px 10px
+}
+
+.filter-search{
+        float:left;
+
+}
+.filter-search .inputbox
+{width:6em}
+
+
+legend.element-invisible{
+        position:absolute;
+        margin-left:-3000px;
+        margin-top:-3000px;
+        height:0px;
+}
+
+.cat-items{
+        margin-top:20px
+}
+
+
+
+/* ++++++++++++++  Mensajes de error de formulario de contacto  ++++++++++++++ */
+p.error{
+        padding:10px;
+}
+
+/* ++++++++++++++  Estilo para el editor  ++++++++++++++ */
+.contentpaneopen_edit{
+        float: left;
+}
+
+.contentpaneopen_edit img{
+}
+
+
+a.mceButton:hover  {background:none !important}
+
+/* ++++++++++++++  paginador de Articulos  ++++++++++++++ */
+table.contenttoc{
+        padding:10px;
+        margin:10px;
+}
+
+table.contenttoc tr td{
+        padding:1px 0px
+}
+
+.pagenavcounter{
+        font-weight:bold;
+}
+
+
+/* ++++++++++++++  Edicion de Articulos  ++++++++++++++ */
+legend{
+        padding:3px 5px;
+}
+
+form#adminForm{
+}
+
+.edit form#adminForm fieldset{
+        padding:20px 15px;
+        margin:10px 0 15px 0;
+}
+
+.formelm{
+        margin:5px 0
+}
+
+
+.formelm label{
+        width:13em;
+        display:inline-block;
+        vertical-align:top;
+}
+
+form#adminForm .formelm-area{
+        padding:5px 0
+}
+
+form#adminForm .formelm-area label{
+        vertical-align:top;
+        display:inline-block;
+        width:7.9em
+}
+
+.formelm-buttons{
+        text-align:right;
+        margin-bottom:10px
+}
+
+/*Estilos botones debajo del editor Wysiwing desde la parte Publica*/
+  .button2-left a,
+  .button2-right a,
+  .button2-left span,
+  .button2-right span{
+    color:#666;
+    }
+  .button2-left span,.button2-right span{cursor:default;color:#999;}
+  .button2-left a:hover,.button2-right a:hover{text-decoration:none;color:#0B55C4;}
+  .button2-left a,.button2-left span{
+   padding:0 24px 0 6px;
+   text-decoration:none;
+     font-weight: normal;
+     margin-top: 0;
+  }
+
+
+
+
+
+/* ++++++++++++++  tooltip  ++++++++++++++ */
+
+.tip{
+    border:solid 1px #333;
+      background:#ffffcc;
+        font-size:0.8em;
+        text-align:left;
+        padding:3px;
+        max-width:400px
+}
+
+.tip-title{
+        font-weight:bold;
+}
+
+/* #################### Estilos para los Modulos basicos ############################ */
+
+/* newsflash horizontal */
+.newsflash-horiz{
+        overflow:hidden;
+        list-style-type:none !important;
+        margin:0 5px!important;
+        padding:20px 10px !important
+}
+
+.newsflash-horiz li{
+        float:left;
+        width:30%;
+        margin:0 1% !important;
+        padding:10px 5px;
+}
+
+ul.newsflash-horiz li h4{
+    font-size:1.4em;
+}
+.newsflash-horiz li img{
+    display:block;
+    margin-bottom:10px
+}
+
+/* newsflash vertical */
+
+.newsflash-vert{
+    padding:0
+}
+
+
+/* ++++++++++++++  Modulo Banner  ++++++++++++++ */
+
+.banneritem{
+        margin: 10px 0px 10px 0px;
+        padding:0px;
+}
+
+.banneritem a{
+        font-weight:bold
+}
+
+
+/* ++++++++++++++  Ultimas Noticias, Popular  ++++++++++++++ */
+
+.module_content ul.latestnews,
+.module_content ul.mostread{
+        margin:10px 0 0 0
+}
+
+ul.latestnews,
+ul.mostread{
+        padding-left:10px;
+        list-style-type:none !important;
+}
+
+ul.latestnews li,
+ul.mostread li{
+    padding:2px 2px 2px 15px ;
+    display:block;
+  background:url(../images/vineta.png) no-repeat left 10px;
+}
+
+
+/* ++++++++++++++  newsfeed  ++++++++++++++ */
+.newsfeed{
+        padding:0 5px
+}
+
+ul.newsfeed{
+        padding:0 !important
+}
+
+.newsfeed-item{
+        padding:5px 0 0 0;
+        margin:0
+}
+
+.newsfeed-item h5 a{
+        font-size:1.1em;
+        font-weight:bold !important
+}
+
+.feed-item-description img
+{margin: 5px 10px 10px 0}
+
+dl.newsfeed-count dt,
+dl.newsfeed-count dd{
+        display:inline
+}
+
+/* ++++++++++++++  weblinks  ++++++++++++++ */
+
+dl.weblink-count dt,
+dl.weblink-count dd{
+        display:inline;
+
+}
+
+/* ++++++++++++++  login  ++++++++++++++ */
+
+#login-form{
+        padding-top:5px
+}
+
+#login-form fieldset{
+        padding:0px;
+}
+
+#login-form .inputbox{
+        padding:2px
+}
+
+#login-form fieldset.input{
+        padding:10px 0 0 0;
+        margin:0px 0 10px 5px
+}
+
+#login-form label{
+        margin-right:10px;
+        width:8.4em;
+        display:block;
+        float:left
+}
+
+#form-login-remember label{
+  float:none;
+  width:auto;
+  display:inline
+}
+
+.logout-button{
+  margin-top:10px
+}
+
+input.button,
+button.button,
+button.validate
+{
+        cursor:pointer;
+        padding:3px 5px 3px 7px ;
+        font-weight:bold;
+        line-height:1.2em;
+        font-family:arial;
+}
+
+#modlgn-username,
+#modlgn-passwd{
+        width:9em
+}
+
+.module_content #form-login-username label,
+.module_content #form-login-password label{
+            float:left;
+            width:5.2em
+}
+
+.login-fields{
+        margin:10px 0
+}
+
+.login-fields label{
+        float:left;
+        width:9em
+}
+
+.login-description img,
+.logout-description img{
+        float:left;
+        margin-right:20px
+}
+
+.login-description,
+.logout-description{
+        overflow:hidden;
+        padding-left:5px;
+        margin:20px 0 10px 0
+}
+
+.logout-description{
+        margin-bottom:20px
+}
+
+
+/* Paginacion del Blog */
+#main ul.pagenav {
+  list-style-type:none;
+  padding:0;
+  overflow:hidden
+}
+ul.pagenav li{
+  display:inline-block;
+  padding:0px;
+  margin:0;
+}
+#main ul.pagenav li{
+  line-height:2em
+}
+ul.pagenav li a{
+  border:solid 1px #ccc;
+  display:inline;
+  background:#eee;
+  padding:2px;
+  text-decoration:none
+}
+ul.pagenav li.pagenav-prev
+{float:left}
+ul.pagenav li.pagenav-next
+{float:right}
+
+/* pagebreak */
+
+#article-index{
+  width:25%;
+  float:right;
+  border:solid 1px #eee;
+  padding:10px;
+  margin: 10px 0px 20px 30px;
+  background:#f9faf9
+}
+#article-index h3{
+  margin:0;
+  font-size:1em;
+}
+
+#article-index ul{
+  list-style-type:disc;
+  color:#666
+}
+
+
+/* Popup Mailto */
+
+
+#mailto-window{
+  background:#f5f5f5;
+  padding:15px;
+  border:solid 1px #ddd;
+  position:relative
+}
+#mailto-window label{
+  width:10em}
+
+.mailto-close{
+  position:absolute;
+  right:0;
+  top:5px;
+  background:none;
+}
+
+
+.mailto-close a{
+background:#f5f5f5 url(../images/close.png) no-repeat !important;
+min-width:25px;
+display:block;
+min-height:25px;
+overflow:visible
+}
+
+.mailto-close a  span{
+  position:absolute;
+  left:-3000px;
+  top:-3000px;
+  display:inline
+
+}
+#mailto-window  .inputbox{
+  background:url("../images/content_bg.gif") repeat-x scroll 0 0 #FFFFFF;
+  border:1px solid #ccc;
+  padding:3px;
+}
+
+#mailto-window p{
+  margin-top:20px
+}
+
+#mailto-window button{
+  margin:0 5px 0 0
+}
+
+
+span.spacer > span.text label {
+  white-space: nowrap;
+  font-weight: bold;
+  color: #666;
+}
+.red {
+  font-weight: bold;
+  color: #c00;
+}
+
+.star {
+  color:#cc0000;
+}
+
+
+/* ++++++++++++++  Modulo feed ++++++++++++++ */
+
+div.feed {
+  display:block;
+  padding: 5px 10px;
+}

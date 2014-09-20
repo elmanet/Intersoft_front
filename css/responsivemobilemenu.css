@@ -1,0 +1,132 @@
+
+  .menu1  {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    height: 40px; 
+
+   
+  }
+
+  .menu1  br { display:none; }
+
+
+  .menu1  li {
+    display: block;
+    float: left;
+    height: 40px;
+    list-style: none;
+    margin: 0;
+    padding-top: 10px;
+    position: relative;
+  }
+  .menu1 li a {
+
+color: #fff;
+display: block;
+line-height: 38px;
+padding: 0 27px;
+margin: -1px 0;
+text-decoration: none;
+-webkit-transition: color .2s ease-in-out;
+-moz-transition: color .2s ease-in-out;
+-o-transition: color .2s ease-in-out;
+-ms-transition: color .2s ease-in-out;
+transition: color .2s ease-in-out;
+padding-top: 3px;
+border-left: 1px solid;
+border-left-style: dotted;
+  }
+  /* eliminamos los bordes del primer y el último */
+  .menu1 li:first-child a { border-left: none; }
+  .menu1 li:last-child a{ border-right: none; }
+  /* efecto hover cambia el color */
+  .menu1 li:hover > a { color: #d91b5c;text-shadow:0 0 10px #fff; }
+
+
+  .menu1 ul {
+    border-radius: 0 0 5px 5px;
+    left: 0;
+    margin: 0;
+    opacity: 0; /* no son visibles */
+    position: absolute;
+    top: 50px; /* se ubican debajo del enlace principal */
+    /* el color de fondo */
+    background: #fff;
+    background: -moz-linear-gradient(#fff,#cdca4d);
+    background: -webkit-linear-gradient(#fff,#cdca4d);
+    background: -o-linear-gradient(#fff,#cdca4d);
+    background: -ms-linear-gradient(#fff,#cdca4d);
+    background: linear-gradient(#fff,#cdca4d);
+    /* animamos su visibildiad */
+    -moz-transition: opacity .25s ease .1s;
+    -webkit-transition: opacity .25s ease .1s;
+    -o-transition: opacity .25s ease .1s;
+    -ms-transition: opacity .25s ease .1s;
+    transition: opacity .25s ease .1s;
+    z-index: 9999999 !important;
+  }
+  /* son visibes al poner el cursor encima */
+  .menu1 li:hover > ul { opacity: 1; }
+
+
+  .menu1 ul li {
+    height: 0; /* no son visibles */
+    overflow: hidden;
+    padding: 0;
+    /* animamos su visibildiad */
+    -moz-transition: height .25s ease .1s;
+    -webkit-transition: height .25s ease .1s;
+    -o-transition: height .25s ease .1s;
+    -ms-transition: height .25s ease .1s;
+    transition: height .25s ease .1s;
+  }
+  .menu1 li:hover > ul li a:hover{
+    color: #000;
+  }
+  
+.menu1 li:hover > ul li {
+    height: 36px; 
+    overflow: visible;
+    padding: 0;
+  }
+  .menu1 ul li a {
+    border: none;
+  /* border-bottom: 1px solid #A7A7A7; */
+    margin: 0;
+
+    padding: 5px 20px;
+    width: 180px;
+  }
+
+  .menu1 ul li:last-child a { border: none; }
+  
+  /*--------------------------------------------------------------------------------------------------
+	***********************	 RESPONSIVE	***************************** 
+ --------------------------------------------------------------------------------------------------*/
+@media ( max-width: 1024px ) {
+
+
+}
+ 
+ 
+  
+@media ( max-width: 980px ) {
+
+	body { min-width: 768px;padding: 0!important;}
+	.menu1 li a { padding: 0 21px; }		
+
+}
+
+
+
+@media ( max-width: 747px) { 
+
+	body { min-width: 320px;padding: 0!important; }
+	.menu1  li { width: 100%;width: 100%;background-color: #07436e;margin-bottom: 2px;border-radius: 5px; }
+	.menu1 li a { border-right: 0px solid #A7A7A7; color: #fff; }
+	   .menu1  li:hover {background-color:#11a79c;}
+	.menu1 li a:hover { color: #000; }
+	
+
+}

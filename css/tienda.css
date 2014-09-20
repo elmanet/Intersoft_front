@@ -1,0 +1,91 @@
+/* ---------------------------------------------------------------------------------
+HOJA DE ESTILOS CREADA POR: 
+INTERSOFT-latin.  2002-2014
+www.miguayaba.com
+------------------------------------------------------------------------------------*/
+  
+   
+/* ESTILOS DE CARRITO */
+
+#contenedor_principal #contenedor_central #contenido .productos{
+  float:left;
+width: 28%;
+height: 350px;
+margin-left: 0.5%;
+margin-right: 0.5%;
+margin-top: 5px;
+margin-bottom: 5px;
+ 
+padding: 2%;
+   } 
+   
+#contenedor_principal #contenedor_central #contenido .producto_foto{
+  width:45%;
+  margin-right:2%;
+  float:left;
+   }
+#contenedor_principal #contenedor_central #contenido .producto_precio{
+  width:53%;
+  float:left;
+   }
+   
+.foto_peq_producto{
+	border:2px solid #9C9C9C;
+	background-color: #fff;
+	height: 248px;}
+	
+.fotoendetalle{
+ width:68%;
+ float:left;
+ margin-right:2%;	
+	}
+	
+.precioendetalle{
+ width:30%;
+ float:left;	
+	}
+
+.productos_destacados{
+  float:left;
+width: 20%;
+margin-left: 0.5%;
+margin-right: 0.5%;
+margin-top: 5px;
+margin-bottom: 5px;
+background-color: #D6CECE;
+padding: 2%;
+   }
+
+/* FIN DE ESTILOS DE CARRITO */
+
+
+
+
+/*--------------------------------------------------------------------------------------------------
+	***********************	 RESPONSIVE	***************************** 
+ --------------------------------------------------------------------------------------------------*/
+@media ( max-width: 1024px ) {
+
+
+}
+ 
+ 
+  
+@media ( max-width: 980px ) {
+
+	
+}
+
+
+
+@media ( max-width: 747px) { 
+
+	
+	#contenedor_principal #contenedor_central #contenido .productos{ width:100%;text-align: center;}
+	#contenedor_principal #contenedor_central #contenido .producto_foto{ width:100%;margin-right:0%;}
+	.fotoendetalle{ width:100%;	}
+	.precioendetalle{ width:100%;	}
+#contenedor_principal #contenedor_central #contenido .producto_precio{ width:100%; text-align: center;}
+
+	
+}
