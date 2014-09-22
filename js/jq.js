@@ -1,0 +1,1 @@
+<center><br><br>No Tienes los derechos para usar Intersoft CMS</center>
