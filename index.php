@@ -160,8 +160,35 @@ $tipoletra=$row_config['tipof_google'];
 			</div>
 		<?php } ?>
 	</div> <!-- FIN MENU 1-->
-
 </div> <!-- FIN HEADER 100% -->
+
+	<!-- BANNER PRINCIPAL 1 -->
+ 	<?php if(($_GET['mg']=="")and($_GET['mod']=="")){ ?>
+		<?php if($totalRows_banner1>0){ ?>
+			<div id="conten_banner">
+				<div id="banner1">
+					<div id="slides">
+	   					<div class="callbacks_container">
+       						<ul class="rslides" id="slider1">		 
+								<?php do { ?>
+		 							<?php if($row_banner1['titulo_foto']=="") {?>
+           								<li>
+           									<img src="imagesmg/<?php echo $row_banner1['ruta']; ?>" alt="" />
+           									<?php if($row_banner1['info']=="") { }else {?><p class="caption"><?php echo $row_banner1['info'];} ?></p>           
+           								</li>
+           							<?php }else {?>       
+           								<li>
+           									<a href="<?php echo $row_banner1['titulo_foto']; ?>"><img src="imagesmg/<?php echo $row_banner1['ruta']; ?>" alt="" /></a>
+            								<?php if($row_banner1['info']=="") { }else {?><p class="caption"><a href="<?php echo $row_banner1['titulo_foto']; ?>"><?php echo $row_banner1['info'];} ?></a>          
+           								</li>
+       								<?php } ?>   
+								<?php } while ($row_banner1 = mysql_fetch_assoc($banner1)); ?>
+							</ul> 
+						</div>
+					</div>
+				</div>
+			</div>
+	<?php } } ?>  <!-- FIN BANNER PRINCIPAL 1 -->
 
   
 <!-- CONTENEDOR PRINCIPAL -->
@@ -212,7 +239,7 @@ $tipoletra=$row_config['tipof_google'];
 			<?php } while ($row_position6 = mysql_fetch_assoc($position6)); ?> 
 		</div>
 		
-	</div> <!-- FIN CONTENEDOR MODULOS -->
+	</div> <?php } ?><!-- FIN CONTENEDOR MODULOS -->
 
 
 	<!-- CONTENEDOR CENTRAL -->
@@ -371,7 +398,6 @@ $tipoletra=$row_config['tipof_google'];
  	<?php } ?> <!-- FIN CREDITOS 1 -->
 
 	<div class="final"></div>
-
 </div> <!-- FIN CONTENEDOR PRINCIPAL -->
 
 	
