@@ -81,14 +81,15 @@
 
 <body>
 <div style="width:100%;">
-<div style="float:left;width: 425px;margin-right:27px;">
+<div style="float:left;width: 700px;margin-right:27px;">
 <br>
-<h1><em>Contáctenos</em></h1>
-<p><b>En Mis Tacones</b> es un blog de moda que te ayudará a estar a la última: ofertas de las mejores marcas, ropa, complementos, calzado, tecnologia, eventos, vida sana, entre otros.</p>
-<p>Intentaremos mantenerte al día de las últimas tendencias del mundo de la Moda & Fashion a través de nuestras noticias.</p>
-<p>Si quieres que cubramos tu evento, envianos la informacion en nuestro formulario de contactos y los pondremos en nuestra agenda mensual</p>
+<?php do { ?>		
+<div>		
+<?php echo $row_position22['contenido']; ?>	
+</div>		
+<?php } while ($row_position22 = mysql_fetch_assoc($position22)); ?> 
 </div>
-<div style="float:left; width: 310px;">
+<div style="float:left; width: 310px;margin-bottom: 20px;">
 <br />
 <form action="modules/correos/proceso.php" method="post" name="contacto" onSubmit="return formulariodecontacto()">
 Nombre y Apellido:<br />
