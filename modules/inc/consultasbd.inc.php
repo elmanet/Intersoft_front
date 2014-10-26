@@ -167,14 +167,6 @@ $row_banner2 = mysql_fetch_assoc($banner2);
 $totalRows_banner2 = mysql_num_rows($banner2);
 
 
-$alias= $_GET['galeria'];
-mysql_select_db($database_sistemai, $sistemai);
-$query_modulo = "SELECT a.ruta, a.titulo_foto, b.titulo_cate FROM sis_galeria a, sis_galeria_categoria b WHERE a.id_foto_cate=b.id_cate AND b.alias='$alias'";
-$modulo = mysql_query($query_modulo, $sistemai) or die(mysql_error());
-$row_modulo = mysql_fetch_assoc($modulo);
-$totalRows_modulo = mysql_num_rows($modulo);
-
-
 
 /* CATEGORIA DE ARTICULOS */
 

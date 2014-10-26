@@ -6,7 +6,7 @@
 
       $("#slider1").responsiveSlides({
         auto:true,        
-        maxwidth: 749,
+        maxwidth: 2000,
         speed: 800,
         nav: true,
         namespace: "callbacks"      
