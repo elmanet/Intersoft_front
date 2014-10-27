@@ -212,15 +212,20 @@ $tipoletra=$row_config['tipof_google'];
                     </div>
                     <?php } /* FIN C-TOP */ ?>
                     
-                    <?php if($totalRows_position8>0){ ?>
+                    
                     <div id="c-central" class="clearfix">
+                        
+                        <?php // ************* MODULOS DEL SISTEMA *************
+                        require_once('modules/inc/contenido_modulos.inc.php'); 
+                        // ********** FIN MODULOS **************  ?>
+                        
                         <?php do { ?>		
                             <div>		
                                 <?php echo $row_position8['contenido']; ?>	
                             </div>		
                         <?php } while ($row_position8 = mysql_fetch_assoc($position8)); ?> 
                     </div>
-                    <?php } /* FIN C-CENTRAL */ ?>
+                
                     
                     <?php if($totalRows_position9>0){ ?>
                     <div id="c-bottom" class="clearfix">
