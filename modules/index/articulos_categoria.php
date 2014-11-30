@@ -46,20 +46,14 @@ function cortarTexto($texto, $numMaxCaract){
 <?php  do { ?>
 	<div class="container_articulos">
 	    <?php if($row_articuloscate['ruta']=="imagenes/"){ }else { ?>
-	         <div style="width:280px;height:180px;overflow: hidden;border: #F1F1F1 4px solid;">
+	         <div class="f-art">
 	    	    <a href="index.php?mod=<?php echo $row_articuloscate['alias'];?>"><img src="imagesmg/<?php echo $row_articuloscate['ruta']; ?>" alt="" class="efectoimage"></a>
+            <div class="titulo-art"><h2 style="margin-bottom:1px;"><a href="index.php?mod=<?php echo $row_articuloscate['alias'];?>"><?php echo cortarTexto($row_articuloscate['titulo_articulo'], 150); ?></a></h2></div>
 	         </div>   
 	    <?php } ?>
-		  <h2 style="margin-bottom:1px;"><a href="index.php?mod=<?php echo $row_articuloscate['alias'];?>"><?php echo cortarTexto($row_articuloscate['titulo_articulo'], 30); ?></a></h2>
-       <span class="articuloscates"><?php echo cortarTexto($row_articuloscate['contenido'], 310); ?></span>
-      
-       <br>
-       <?php /*
-       <span style="float:right;">
-       <a href="index.php?mod=<?php echo $row_articuloscate['alias'];?>" class="large button red" style="color:#fff;">Leer M&aacute;s</a>
-      </span> */?>
-		 
 		  
+       <span class="articuloscates"><?php echo cortarTexto($row_articuloscate['contenido'], 250); ?></span>&nbsp;<a href="index.php?mod=<?php echo $row_articuloscate['alias'];?>"><img src="images/boton_vermas.png" style="vertical-align:middle;display:inline-block;"/></a>
+        
         
 	</div>
 <?php } while ($row_articuloscate = mysql_fetch_assoc($articuloscate)); ?>

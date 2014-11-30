@@ -8,7 +8,7 @@ www.miguayaba.com
     margin-left: auto;
     margin-right: auto;
     min-height: 100%;
-    max-width: 1200px;
+    
 }
 
 
@@ -17,6 +17,10 @@ www.miguayaba.com
     margin: 0px 0px 0px 0%;
     clear: none;
     width: 100%;
+    position: absolute;
+    z-index: 10;
+    top: 2%;
+    left: 1%;
 }
 
 #logo {
@@ -24,7 +28,7 @@ www.miguayaba.com
     margin-left: 0%;
     margin-top: 0px;
     clear: none;
-    width: 30%;
+    width: 45%;
     padding: 8px;
 
 }
@@ -34,7 +38,7 @@ www.miguayaba.com
     margin-left: 0%;
     margin-top: 0px;
     clear: none;
-    width: 70%;
+    width: 50%;
     padding: 8px;
     margin-right: 0%;
 }
@@ -47,9 +51,18 @@ www.miguayaba.com
     clear: both;
     width: 100%;
     min-width: 0px;
-    background-color: rgb(116, 116, 116);
+
 }
 
+#line-menu{
+
+    width: 100%;
+    background-color: #000;
+    height: 10px;
+    margin-top: -3px;
+    float: left;
+    clear: both;
+}
 #banner {
     float: left;
     margin-left: 0%;
@@ -61,7 +74,7 @@ www.miguayaba.com
 
 #contenedor-central {
     float: left;
-    margin: 0px;
+    margin-top: 30px;
     clear: both;
     width: 100%;
     display: block;
@@ -78,24 +91,24 @@ www.miguayaba.com
 
 #mod1 {
     float: left;
-    margin: 0.99937862% 1% 1% 1.997463%;
+    margin: 3% 3% 1% 6%;
     clear: both;
-    width: 30%;
+    width: 25%;
 
 }
 
 #mod2 {
     float: left;
-    margin: 0.99937862% 2% 1% 2.000052%;
+    margin: 3% 4% 1% 4%;
     clear: none;
-    width: 30%;
+    width: 25%;
 }
 
 #mod3 {
     float: left;
-    margin: 1%;
+    margin: 3% 2.5% 1% 2.5%; 
     clear: none;
-    width: 30%;
+    width: 25%;
 }
 
 #contenido-central {
@@ -111,6 +124,11 @@ www.miguayaba.com
     clear: none;
     width: 70%;
 }
+
+.contenido100 {
+    width: 100% !important;
+}
+
 
 #derecha {
     float: left;
@@ -223,6 +241,7 @@ www.miguayaba.com
     margin: 10px 0px 0px;
     clear: both;
     width: 100%;
+    background-color: #1c1c1c;
 }
 
 #creditos {
@@ -230,23 +249,70 @@ www.miguayaba.com
     margin: 0px auto;
     clear: none;
     width: 95%;
+    color: #cdcdcd;
+    margin-top: 40px;
 
 }
 
+#creditos p{color: #cdcdcd;}
+#creditos a{color: #cdcdcd;}
+#creditos td{color: #cdcdcd;}
 
 /*--------------------------------------------------------------------------------------------------
 	***********************	 ESTILOS VARIOS	***************************** 
  --------------------------------------------------------------------------------------------------*/
 
+.icono{ width:120px;position:absolute;top:-60px;z-index:10}
+.m1{right:455px;}
+.m2{right:300px;}
+.m3{right:152px;}
+.m4{right:5px;}
+.m1:hover{cursor: pointer;width:130px;top:-65px}
+.m2:hover{cursor: pointer;width:130px;top:-65px}
+.m3:hover{cursor: pointer;width:130px;top:-65px}
+.m4:hover{cursor: pointer;width:130px;top:-65px}
+
+#contacto-contenido{float:left;width: 70%;margin-right:4%;}
+#contacto-formulario{float:left; width: 25%;margin-bottom: 20px;margin-top:20px;}
+
+
+
 
 /*--------------------------------------------------------------------------------------------------
 	***********************	 RESPONSIVE	***************************** 
  --------------------------------------------------------------------------------------------------*/
+@media only screen and ( max-width: 1200px ) {
 
-@media only screen and ( max-width: 980px ) {
 
-	body { min-width: 768px;padding: 0!important;}
-    
+.icono{ width:100px;top:-50px;}
+.m1{right:328px;}
+.m2{right:220px;}
+.m3{right:112px;}
+.m4{right:5px;}
+.m1:hover{cursor: pointer;width:110px;top:-55px}
+.m2:hover{cursor: pointer;width:110px;top:-55px}
+.m3:hover{cursor: pointer;width:110px;top:-55px}
+.m4:hover{cursor: pointer;width:110px;top:-55px}   
+
+}
+
+@media only screen and ( max-width: 860px ) {
+
+.icono{ width:80px;top:-40px;}
+.m1{right:300px;}
+.m2{right:200px;}
+.m3{right:100px;}
+.m4{right:5px;}
+.m1:hover{cursor: pointer;width:90px;top:-45px}
+.m2:hover{cursor: pointer;width:90px;top:-45px}
+.m3:hover{cursor: pointer;width:90px;top:-45px}
+.m4:hover{cursor: pointer;width:90px;top:-45px} 
+
+.tab-none{display: none;}
+.tab-size{width: 40% !important;} 
+
+#contacto-contenido{float:left;width: 65%;margin-right:4%;}
+#contacto-formulario{float:left; width: 25%;margin-bottom: 20px;margin-top:20px;}    
 
 }
 
@@ -255,43 +321,55 @@ www.miguayaba.com
 	body { min-width: 320px;padding: 0!important; }
     
     #logo {
-        width: 100%;
+        width: 90%;
+        margin: 30px auto 0px auto;
+        float: none;
     }
 
-    #mod-header {
-        margin-top: 0px;
-        margin-left: 0%;
-        clear: both;
-        width: 100%;
-        margin-right: 0%;
-    }
+    #mod-header{display: none;}
+
 
     #menu {
-        margin-left: 0%;
-        clear: both;
+        display: none;
     }
 
+    #line-menu{height: 3px;background-color: #CAA75B;}
+    .icono {display: none; }
+
     #banner {
-        visibility: hidden;
+        /*visibility: hidden;*/
+        opacity: 0.3;
+    }
+
+    #contenedor-central{
+        margin-top:0px;
     }
 
     #mod1 {
-        width: 100%;
+        width: 85%%;
+        padding: 3%;
+        margin: auto;
+        float: none;
     }
 
     #mod2 {
-        margin: 5px 0px;
-        width: 100%;
+        padding: 3%;
+        width: 85%%;
+        margin: auto;
+        float: none;
     }
 
     #mod3 {
-        width: 100%;
-        margin: 0px;
+        width: 85%%;
+        padding: 3%;
+        margin: auto;
+        float: none;
     }
 
     #contenido {
-        width: 100%;
+        width: 85%;
     }
+
 
     #derecha {
         width: 100%;
@@ -340,5 +418,11 @@ www.miguayaba.com
         width: 98%;
         margin: 1%;
     }
+
+    .tab-none{display: none;}
+    .tab-size{width: 40% !important;}
+
+    #contacto-contenido{float:none;margin:auto; width: 90%;}
+    #contacto-formulario{float:none;margin:auto; width: 90%;}
 }
 

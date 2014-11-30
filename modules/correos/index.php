@@ -81,7 +81,7 @@
 
 <body>
 <div style="width:100%;">
-<div style="float:left;width: 700px;margin-right:27px;">
+<div id="contacto-contenido">
 <br>
 <?php do { ?>		
 <div>		
@@ -89,8 +89,9 @@
 </div>		
 <?php } while ($row_position22 = mysql_fetch_assoc($position22)); ?> 
 </div>
-<div style="float:left; width: 310px;margin-bottom: 20px;">
-<br />
+<div id="contacto-formulario" >
+<span style="font-size:1.7em;text-align:center;">Escr&iacute;benos!</span>
+<br /><br />
 <form action="modules/correos/proceso.php" method="post" name="contacto" onSubmit="return formulariodecontacto()">
 Nombre y Apellido:<br />
 <input name="nombre" type="text" class="text_input" id="nombre" value="<?php echo $_GET['nombre'];?>" style="width:250px;height:30px;border-radius:5px;border:2px solid #d8d1d1;margin-bottom:5px;" /><br />

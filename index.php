@@ -36,6 +36,9 @@ $tipoletra=$row_config['tipof_google'];
         
 		<!-- CSS --> 
         <link rel="stylesheet" href="css/template.css" media="all">	
+        <!-- CSS MENU --> 
+        <link rel="stylesheet" type="text/css" href="css/menu/default.css" />
+        <link rel="stylesheet" type="text/css" href="css/menu/component.css" />
         
         <!-- JS -->		 
 		<script type="text/javascript" src="js/jquery.reveal.js"></script>		
@@ -92,6 +95,12 @@ $tipoletra=$row_config['tipof_google'];
     </script>
     <?php } /* Fin verificacion */  ?>   
         
+    <div id="menutop">
+    <?php if($totalRows_menu2>0){ ?>
+        <?php require_once('modules/inc/menu1m.inc.php'); ?>
+    <?php } ?>
+    <span style="position: absolute;left: 60;top: 15;color: #fff;"></span>
+    </div>
 
     <div id="primaryContainer" class="primaryContainer clearfix">
         <?php if($totalRows_position1>0){ ?>
@@ -114,27 +123,12 @@ $tipoletra=$row_config['tipof_google'];
         </div>
         <?php } /* FIN HEADER */ ?>
         
-        
-        <?php if($totalRows_menu1>0){ ?>
-        <div id="menu" class="clearfix">
-            <!-- MENU 1-->
-            <div id="contenedor_menu">
-                <?php if($totalRows_menu1>0){ ?>
-                    <div id="contenedor_menu1">
-                        <div id="menu1">
-                            <?php require_once('modules/inc/menu1.inc.php'); ?>	
-                        </div>
-                    </div>
-                <?php } ?>
-            </div> <!-- FIN MENU 1-->
-        </div>
-        <?php } /* FIN MENU */ ?>
-        
+                        
         <?php if($totalRows_banner1>0){ ?>
         <div id="banner" class="clearfix">
             
             <!-- BANNER PRINCIPAL 1 -->
-            <?php if(($_GET['mg']=="")and($_GET['mod']=="")){ ?>
+ 
                 <?php if($totalRows_banner1>0){ ?>
                     <div id="conten_banner">
                         <div id="banner1">
@@ -159,12 +153,29 @@ $tipoletra=$row_config['tipof_google'];
                             </div>
                         </div>
                     </div>
-            <?php } } ?>  <!-- FIN BANNER PRINCIPAL 1 -->
+            <?php } ?>  <!-- FIN BANNER PRINCIPAL 1 -->
             
         </div>
         <?php } /* FIN BANNER VERIFICACION */ ?>
+
+
+        <?php if($totalRows_menu1>0){ ?>
+        <div id="menu" class="clearfix">
+            <!-- MENU 1-->
+            <div id="contenedor_menu">
+                <?php if($totalRows_menu1>0){ ?>
+                    <div id="contenedor_menu1">
+                        <div id="menu1">
+                            <?php require_once('modules/inc/menu1.inc.php'); ?> 
+                        </div>
+                    </div>
+                <?php } ?>
+            </div> <!-- FIN MENU 1-->
+        </div>
+        <?php } /* FIN MENU */ ?>
         
         <div id="contenedor-central" class="clearfix">
+            <?php if(($_GET['mg']=="")and($_GET['mod']=="")){ ?>
             <?php if($totalRows_position3>0){ ?>
             <div id="conten-top" class="clearfix">
                 <?php do { ?>		
@@ -198,10 +209,16 @@ $tipoletra=$row_config['tipof_google'];
                     </div>		
                 <?php } while ($row_position6 = mysql_fetch_assoc($position6)); ?> 
             </div>
-             <?php } /* FIN MODULES 1-2-3 */ ?>
+             <?php } } /* FIN MODULES 1-2-3 */ ?>
             
             <div id="contenido-central" class="clearfix">
-                <div id="contenido" class="clearfix">
+
+                <?php if($totalRows_position10>0) { ?>
+                    <div id="contenido" class="clearfix">
+                <?php }else{ ?>
+                    <div id="contenido" class="contenido100 clearfix">
+                <?php } ?>
+
                     <?php if($totalRows_position7>0){ ?>
                     <div id="c-top" class="clearfix">
                         <?php do { ?>		
@@ -351,11 +368,24 @@ $tipoletra=$row_config['tipof_google'];
         <?php } /* FIN CREDITOS */ ?>
     </div>  <!-- FIN CONTAINER PRINCIPAL -->
 
+    <!-- ESPECIALES -->
+            <?php require_once('modules/inc/propiedades-especiales-html.inc.php'); ?>
+
     <!-- SCRIPT -->
           
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script> 
     <script src="js/plugins.js"></script>       
     <script src="js/main.js"></script>
+
+    <!-- SCRIPT MENU RESPONSIVE-->
+    <script src="js/menu/jquery.dlmenu.js"></script>
+        <script>
+            $(function() {
+                $( '#dl-menu' ).dlmenu({
+                    animationClasses : { classin : 'dl-animate-in-2', classout : 'dl-animate-out-2' }
+                });
+            });
+        </script>
      
     <!-- GOOGLE ANALYTICS -->   
     <?php if($row_config['id_google']=="") {?>

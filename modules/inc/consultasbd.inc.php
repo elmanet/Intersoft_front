@@ -148,7 +148,7 @@ $totalRows_menu1 = mysql_num_rows($menu1);
 
 
 mysql_select_db($database_sistemai, $sistemai);
-$query_menu2 = "SELECT a.id_menu_link, a.titulo_link, a.tipo_link, a.id_articulo, a.id_art_cate, a.url_int, a.url_ext, a.id_menu, a.orden, a.status, b.descripcion, c.alias  FROM sis_plantilla_menu_link a, sis_plantilla_menu b, sis_plantilla_articulos c WHERE a.id_menu=b.id_menu AND a.id_articulo=c.id_articulo AND a.id_menu=2 AND a.status=1 ORDER BY a.orden ASC;";
+$query_menu2 = "SELECT a.id_menu_link, a.titulo_link, a.tipo_link, a.id_articulo, a.id_art_cate, a.url_int, a.url_ext, a.id_menu, a.orden, a.status, b.descripcion, c.alias  FROM sis_plantilla_menu_link a, sis_plantilla_menu b, sis_plantilla_articulos c WHERE a.id_menu=b.id_menu AND a.id_articulo=c.id_articulo AND a.id_menu=1 AND a.status=1 ORDER BY a.orden ASC;";
 $menu2 = mysql_query($query_menu2, $sistemai) or die(mysql_error());
 $row_menu2 = mysql_fetch_assoc($menu2);
 $totalRows_menu2 = mysql_num_rows($menu2);

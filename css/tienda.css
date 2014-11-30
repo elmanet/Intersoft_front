@@ -8,14 +8,7 @@ www.miguayaba.com
 /* ESTILOS DE CARRITO */
 .productos{ width: 26%;margin-left: 2%;float: left;}
 
-.container_articulos{width: 360px; height: 300px; float: left; padding: 0px;margin: 0 21px 30px 0  }
-.container_articulos h2{line-height: 1.2;font-size: 22px;}
-.container_articulos p{line-height: 1.2;}
-.articuloscates{padding:2px;}
-.articuloscates img{display: none;}
-.pag {float:left;width:100%;margin-bottom:20px;margin-top:20px;}
-#contenedor_principal #contenedor_central #contenido .pag ul li {margin-left: 0px;}
-#contenedor_principal #contenedor_central #contenido #slides ul li {margin-left: 0px;}
+
 
 .efectoimage{
 width: 360px;
@@ -101,7 +94,20 @@ padding: 2%;
 /* FIN DE ESTILOS DE CARRITO */
 
 
+/* ESTILOS ARTICULOS */
 
+.f-art{width:100%;height:200px;overflow: hidden;border: #F1F1F1 4px solid;position: relative;}
+.titulo-art{position: absolute;top:2px;left:2px;}
+.titulo-art h2{background: rgba(255,255,255,0.8);padding: 5px;margin-right: 2px;}
+
+.container_articulos{width: 45%; height: 300px; float: left; padding: 0px;margin: 0 21px 30px 0  }
+.container_articulos h2{line-height: 1.2;font-size: 22px;}
+.container_articulos p{line-height: 1.2;}
+.articuloscates{padding:2px;font-size: 0.8em;}
+.articuloscates img{display: none;}
+.pag {float:left;width:100%;margin-bottom:20px;margin-top:20px;}
+#contenedor_principal #contenedor_central #contenido .pag ul li {margin-left: 0px;}
+#contenedor_principal #contenedor_central #contenido #slides ul li {margin-left: 0px;}
 
 /*--------------------------------------------------------------------------------------------------
 	***********************	 RESPONSIVE	***************************** 
